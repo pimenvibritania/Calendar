@@ -1,9 +1,11 @@
 {% extends "myapp/base.html" %}
 
 {% block content %}
-    <div class="jumbotron">
-        <h1>
-            CalendarApp
-        </h1>
+    <div class="container">
+        <div class="row">
+            {% for entry in entries  %}
+                {% include "myapp/_calendar_entry.html" %}
+            {% endfor %}
+        </div>
     </div>
 {% endblock  %}
